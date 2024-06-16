@@ -8,7 +8,7 @@
 		<version>3.3.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bard.weather</groupId>
+	<groupId>com.bard.cityWeather</groupId>
 	<artifactId>WeatherTemperatureApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>WeatherTemperatureApp</name>
