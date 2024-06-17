@@ -1,4 +1,4 @@
-package com.bard.weather.weathertemperatureapp.services;
+package com.bard.weather.weathertemperatureapp.repositories;
 
 
 import com.bard.weather.weathertemperatureapp.config.ApiWeatherConfig;
@@ -6,18 +6,16 @@ import com.bard.weather.weathertemperatureapp.model.CityWeather;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestClient;
 
-@Service
-public class WeatherApiService {
+@Repository
+public class WeatherApiRepository {
     private final RestClient restClient;
     private final ApiWeatherConfig apiWeatherConfig;
 
 
-    public WeatherApiService(ApiWeatherConfig apiWeatherConfig) {
+    public WeatherApiRepository(ApiWeatherConfig apiWeatherConfig) {
         this.apiWeatherConfig = apiWeatherConfig;
         this.restClient = RestClient.create();
     }
