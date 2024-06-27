@@ -5,7 +5,6 @@ import com.bard.weather.weathertemperatureapp.model.CityWeather;
 import com.bard.weather.weathertemperatureapp.model.Weather;
 import com.bard.weather.weathertemperatureapp.repositories.CityTemperatureRepository;
 import com.bard.weather.weathertemperatureapp.repositories.WeatherApiRepository;
-import com.bard.weather.weathertemperatureapp.web.data.UpdateValueForFront;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -26,7 +25,7 @@ import static com.bard.weather.weathertemperatureapp.model.CityWeatherToWeatherC
 public class WeatherService {
     private final CityTemperatureRepository cityTemperatureRepository;
     private final WeatherApiRepository weatherApiRepository;
-    private UpdateValueForFront updateValueForFront;
+    private UpdateContentListener updateValueForFront;
 
     @Transactional
     public Weather getCityTemperature(String city) {
