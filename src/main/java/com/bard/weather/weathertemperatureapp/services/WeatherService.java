@@ -5,7 +5,7 @@ import com.bard.weather.weathertemperatureapp.model.CityWeather;
 import com.bard.weather.weathertemperatureapp.model.Weather;
 import com.bard.weather.weathertemperatureapp.repositories.CityTemperatureRepository;
 import com.bard.weather.weathertemperatureapp.repositories.WeatherApiRepository;
-import com.bard.weather.weathertemperatureapp.util.UpdateValueForFront;
+import com.bard.weather.weathertemperatureapp.web.data.UpdateValueForFront;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -56,8 +56,7 @@ public class WeatherService {
                     cityWeather.getTemperature(),
                     cityWeather.getWeatherText());
             if (this.updateValueForFront != null) {
-                cityWeather.setCity("TEST");
-                this.updateValueForFront.updateContent(convert(cityWeather));
+                this.updateValueForFront.updateContent();
             }
         });
 
